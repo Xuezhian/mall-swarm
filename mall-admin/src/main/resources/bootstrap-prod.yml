@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 119.3.158.133:8848
+        ip: 119.3.158.133
+        port: 8080
+      config:
+        server-addr: 119.3.158.133:8848
+        file-extension: yaml
+        group: admin
