@@ -2,10 +2,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 119.3.158.133:8848
-        ip: 119.3.158.133
-        port: 8080
+        server-addr: http://49.232.15.4:8848
+        ip: 49.232.99.204
+        port: 8888
       config:
-        server-addr: 119.3.158.133:8848
+        server-addr: http://49.232.15.4:8848
         file-extension: yaml
         group: admin
