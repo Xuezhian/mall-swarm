@@ -93,4 +93,6 @@ public interface UmsAdminService {
      * 获取当前登录后台用户
      */
     UmsAdmin getCurrentAdmin();
+
+    void insertTest();
 }

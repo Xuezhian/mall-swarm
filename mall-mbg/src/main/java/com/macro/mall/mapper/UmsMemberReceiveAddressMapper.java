@@ -27,4 +27,6 @@ public interface UmsMemberReceiveAddressMapper {
     int updateByPrimaryKeySelective(UmsMemberReceiveAddress record);
 
     int updateByPrimaryKey(UmsMemberReceiveAddress record);
+
+    int updateState(Long id);
 }

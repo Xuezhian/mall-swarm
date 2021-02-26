@@ -16,9 +16,11 @@ spring:
         login-password: druid
   data:
     mongodb:
-      host: localhost
+      host: 49.232.99.204
       port: 27017
-      database: mall-port
+      database: mall-prot
+      username: admin
+      password: 123456
   redis:
     host: localhost # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）

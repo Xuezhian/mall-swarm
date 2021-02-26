@@ -197,4 +197,11 @@ public class UmsAdminController {
         UserDto userDTO = adminService.loadUserByUsername(username);
         return userDTO;
     }
+    @ApiOperation("insertTest")
+    @RequestMapping(value = "/insertTest", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult insertTest(){
+        adminService.insertTest();
+        return null;
+    }
 }

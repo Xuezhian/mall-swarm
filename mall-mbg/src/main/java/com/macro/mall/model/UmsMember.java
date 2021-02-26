@@ -9,6 +9,9 @@ public class UmsMember implements Serializable {
 
     private Long memberLevelId;
 
+    @ApiModelProperty(value = "微信id")
+    private String weChat;
+
     @ApiModelProperty(value = "用户名")
     private String username;
 
@@ -17,6 +20,9 @@ public class UmsMember implements Serializable {
 
     @ApiModelProperty(value = "昵称")
     private String nickname;
+
+    @ApiModelProperty(value = "真实姓名")
+    private String realName;
 
     @ApiModelProperty(value = "手机号码")
     private String phone;
@@ -61,6 +67,22 @@ public class UmsMember implements Serializable {
     private Integer historyIntegration;
 
     private static final long serialVersionUID = 1L;
+
+    public String getWeChat() {
+        return weChat;
+    }
+
+    public void setWeChat(String weChat) {
+        this.weChat = weChat;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
 
     public Long getId() {
         return id;

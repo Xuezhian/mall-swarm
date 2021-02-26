@@ -14,10 +14,7 @@ import com.macro.mall.dao.UmsAdminPermissionRelationDao;
 import com.macro.mall.dao.UmsAdminRoleRelationDao;
 import com.macro.mall.dto.UmsAdminParam;
 import com.macro.mall.dto.UpdateAdminPasswordParam;
-import com.macro.mall.mapper.UmsAdminLoginLogMapper;
-import com.macro.mall.mapper.UmsAdminMapper;
-import com.macro.mall.mapper.UmsAdminPermissionRelationMapper;
-import com.macro.mall.mapper.UmsAdminRoleRelationMapper;
+import com.macro.mall.mapper.*;
 import com.macro.mall.model.*;
 import com.macro.mall.service.AuthService;
 import com.macro.mall.service.UmsAdminCacheService;
@@ -61,6 +58,8 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     private UmsAdminCacheService adminCacheService;
     @Autowired
     private HttpServletRequest request;
+    @Autowired
+    private UsmTestInsertMapper usmTestInsertMapper;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
@@ -311,5 +310,17 @@ public class UmsAdminServiceImpl implements UmsAdminService {
             adminCacheService.setAdmin(admin);
             return admin;
         }
+    }
+
+    @Override
+    public void insertTest() {
+        List<UsmTestInsert> usmTestInserts=new ArrayList<>();
+        for (int i=0;i<1000000;i++){
+            UsmTestInsert usmTestInsert=new UsmTestInsert();
+            usmTestInsert.setName("kangkang"+i);
+            usmTestInsert.setCreatTime(new Date());
+            usmTestInserts.add(usmTestInsert);
+        }
+        usmTestInsertMapper.insertBreach(usmTestInserts);
     }
 }

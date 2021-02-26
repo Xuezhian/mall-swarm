@@ -46,7 +46,7 @@ spring:
   redis:
     database: 0
     port: 6379
-    host: localhost
+    host: 49.232.15.4
     password:
 secure:
   ignore:
@@ -68,8 +68,10 @@ secure:
       - "/mall-portal/home/**"
       - "/mall-portal/product/**"
       - "/mall-portal/brand/**"
+      - "/mall-portal/wechat/auth/loginByWeixin"
       - "/mall-admin/admin/login"
       - "/mall-admin/admin/register"
+      - "/mall-admin/memberLevel/list"
 #      - "/mall-admin/admin/info"
       - "/mall-admin/minio/upload"
 management: #开启SpringBoot Admin的监控

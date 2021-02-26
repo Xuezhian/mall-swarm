@@ -31,6 +31,7 @@ public class UmsMemberReceiveAddress implements Serializable {
     @ApiModelProperty(value = "详细地址(街道)")
     private String detailAddress;
 
+
     private static final long serialVersionUID = 1L;
 
     public Long getId() {
